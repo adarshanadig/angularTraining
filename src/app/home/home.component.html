@@ -1,0 +1,11 @@
+<p>home works! </p>
+<input #newHero > 
+    <button (click)="addHero(newHero.value)">Add</button>
+
+    <ul>
+        <ul><li *ngFor="let selectedHero of heroes" (click)="onTextClick(selectedHero)" >  
+            <div [ngClass]="selectedHero.selected==true ? 'strikethrough': 'null'">
+                {{selectedHero.name}}
+              </div>
+        </li></ul>       
+    </ul>
