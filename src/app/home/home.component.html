@@ -4,7 +4,9 @@
 
     <ul>
         <ul><li *ngFor="let selectedHero of heroes" (click)="onTextClick(selectedHero)" >  
-            <div [ngClass]="selectedHero.selected==true ? 'strikethrough': 'null'">
+           
+
+              <div [class.strikethrough]="selectedHero.selected">
                 {{selectedHero.name}}
               </div>
         </li></ul>       
